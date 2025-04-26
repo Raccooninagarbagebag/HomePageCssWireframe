@@ -80,13 +80,34 @@ body {
 }
 
 .footer {
-    background-color: white
+    background-color: white;
     grid-area: footer;
-    height: 1fr;
+    height: auto;
 }
 
-@media screen and (max-width: 400px) {
-    .header {
-        background-color: yellow;
+@media screen and (max-width: 480px) {
+    #site_wrap {
+        display: grid;
+        grid-template-columns:  
+            100px
+            100px;
+        grid-gap: 0px;
+        grid-template-rows: 
+            72px 
+            34px 
+            173px 
+            54px 
+            620px
+            565px
+            1fr;
+        grid-template-areas:
+        "box header header"
+        "blank blank blank"
+        "banner banner banner"
+        "motto motto motto"
+        "images images images"
+        "scrollable scrollable scrollable"
+        "footer footer footer";
+        background-color: white;
     }
 }
