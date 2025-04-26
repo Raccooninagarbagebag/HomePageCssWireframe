@@ -31,7 +31,7 @@ body {
         "motto motto motto motto motto motto motto motto"
         ". images images images scrollable scrollable scrollable ."
         "footer footer footer footer footer footer footer footer";
-    background-color: rgb(83, 3, 3);
+    background-color: white;
 }
 
 .header {
@@ -46,25 +46,24 @@ body {
     color: white;
 }
 .blank {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: white;
 }
 .banner {
     background-color: #dc74e4;
     grid-area: banner;
 }
 .motto {
-    background-color: #ffffff;
+    background-color: white;
     grid-area: motto;
+    color: brown;
 }
 .images {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     grid-area: images;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding-top: 20px;
 }
 
 .image-placeholder {
@@ -81,7 +80,7 @@ body {
 }
 
 .footer {
-    background-color: gray;
+    background-color: white
     grid-area: footer;
     height: 1fr;
 }
