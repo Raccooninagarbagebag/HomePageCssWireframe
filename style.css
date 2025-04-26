@@ -1,75 +1,93 @@
-body{
-    margin:0;
-    padding:0;
-    font-family: Arial, Arial, Helvetica, sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
 
-#site_wrap{
-    background-color: red;
-    display:grid;
+#site_wrap {
+    display: grid;
     grid-template-columns: 
         1fr 
-        repeat(4,minmax(0,272px))
-        1fr
-    ;
-    grid-gap:0px;
-    grid-template-rows:
-        104px
-        215px
-        373px
-        373px
-        100%
-    ;
+        55px 
+        275px 
+        190px 
+        115px 
+        727px
+        55px
+        1fr;
+    grid-gap: 0px;
+    grid-template-rows: 
+        85px 
+        80px 
+        244px 
+        155px 
+        784px
+        1fr;
     grid-template-areas:
-    "header header header header header header"
-    "featured_header featured_header featured_header featured_header featured_header featured_header"
-    ". featured_main featured_main featured_main featured_profile ."
-    ". content content content content . "
-    "footer footer footer footer footer footer"
-
+        "box box box header header header header header"
+        "box box box blank blank blank blank blank"
+        "banner banner banner banner banner banner banner banner"
+        "motto motto motto motto motto motto motto motto"
+        ". images images images scrollable scrollable scrollable ."
+        "footer footer footer footer footer footer footer footer";
+    background-color: rgb(83, 3, 3);
 }
 
-.header{
-    background-color: green;
-    grid-area:header;
-    
+.header {
+    background-color: #4E4B69;
+    grid-area: header;
+    display: flex;
+    color: white;
 }
-.featured_header{
-    background-color: purple;
-    grid-area:featured_header;
-    
+.box {
+    background-color: #130e3d;
+    grid-area: box;
+    color: white;
 }
-.featured_main{
-    background-color: orange;
-    grid-area:featured_main;
-    
+.blank {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
-.profile{
-    background-color: blue;
-    grid-area:profile;
-    
+.banner {
+    background-color: #dc74e4;
+    grid-area: banner;
 }
-.content{
-    background-color: black;
-    grid-area:content;
-    
+.motto {
+    background-color: #ffffff;
+    grid-area: motto;
+}
+.images {
+    background-color: rgb(255, 255, 255);
+    grid-area: images;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
 }
 
-.featured_profile{
+.image-placeholder {
+    width: 465px;
+    height: 302px;
+    background-color: #333;
+    color: white;
+    display: flex;
+}
+
+.scrollable {
     background-color: yellow;
-    grid-area:featured_profile;
-    
-}
-.footer{
-    background-color: gray;
-    grid-area:footer;
-    height:100%;
-  
+    grid-area: scrollable;
 }
 
-@media screen and (max-width:400px){
-    .header{
+.footer {
+    background-color: gray;
+    grid-area: footer;
+    height: 1fr;
+}
+
+@media screen and (max-width: 400px) {
+    .header {
         background-color: yellow;
     }
 }
